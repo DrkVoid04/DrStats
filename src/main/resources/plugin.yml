@@ -1,0 +1,49 @@
+name: DrStats
+version: '2.0-SNAPSHOT'
+main: dev.drkvoid.DrStats
+api-version: '1.21'
+prefix: DrStats
+load: STARTUP
+authors: [ DrkVoid ]
+description: A Stats Manager
+
+commands:
+  stats:
+    description: Main command for DrStats plugin.
+    aliases: [ drstats ]
+    permission: drstats.use
+    usage: /stats <subcommand> [args...]
+
+permissions:
+  drstats.admin:
+    description: Grants all DrStats permissions
+    default: op
+    children:
+      drstats.reset: true
+      drstats.edit: true
+      drstats.undo: true
+      drstats.invsee: true
+      drstats.echest: true
+      drstats.rollback: true
+      drstats.view: true
+  drstats.reset:
+    description: Permission to reset stats
+    default: op
+  drstats.edit:
+    description: Permission to edit stats
+    default: op
+  drstats.view:
+    description: Permission to view stats
+    default: op
+  drstats.undo:
+    description: Permission to undo last action
+    default: op
+  drstats.invsee:
+    description: Permission to view/edit inventory
+    default: op
+  drstats.echest:
+    description: Permission to view/edit ender chest
+    default: op
+  drstats.rollback:
+    description: Permission to use the rollback system
+    default: op
