@@ -31,3 +31,73 @@ Whether you are running a seasonal server, fixing a player's corrupted data, or 
   * Target a **specific player**.
   * Target **all online players** (`*`).
   * Target **every player who has ever joined** (`**`).
+  * *Perfect for server wipes or seasonal resets.*
+
+### ↩️ **Admin Safety**
+
+  * **Undo Command:** Made a mistake with a command? `/stats undo` instantly reverts the last admin action.
+  * **Action Logging:** All admin actions are logged to a file for accountability.
+
+-----
+
+## 🧭 Commands & Usage
+
+**Main Command:** `/stats` or `/drstats`
+
+### 🛠️ Management Commands
+
+| Command | Description |
+| :--- | :--- |
+| `/stats view <stat> <player>` | View the value of a specific statistic for a player. |
+| `/stats edit <stat> <player> <amount>` | Set a statistic to a specific value. |
+| `/stats invsee <player>` | Open and edit a player's inventory (Live). |
+| `/stats echest <player>` | Open and edit a player's Ender Chest (Live). |
+
+### ⚠️ Reset Commands
+
+| Command | Action |
+| :--- | :--- |
+| `/stats reset <stat> <target>` | Resets a specific stat (e.g., `deaths`). |
+| `/stats reset inventory <target>` | Wipes the inventory. |
+| `/stats reset echest <target>` | Wipes the Ender Chest. |
+| `/stats reset * <target>` | **Full Wipe:** Resets Stats, Inv, and EChest. |
+
+**Target Arguments:**
+
+  * `<playername>`: Specific player.
+  * `*`: All **Online** players.
+  * `**`: All **Offline & Online** players (Entire Database).
+
+### ♻️ Backup & Restore
+
+| Command | Description |
+| :--- | :--- |
+| `/stats rollback <stat/inventory/echest/*> <player>` | Opens the **Rollback GUI** to browse and restore backups. |
+| `/stats undo` | Reverts the last manual reset or edit command. |
+
+-----
+
+## 🔒 Permissions
+
+You can grant `drstats.admin` for full access, or granular permissions:
+
+  * `drstats.admin` - Full access to the plugin.
+  * `drstats.view` - Allow viewing stats.
+  * `drstats.edit` - Allow editing stats.
+  * `drstats.reset` - Allow resetting data.
+  * `drstats.rollback` - Allow access to the Rollback GUI.
+  * `drstats.invsee` - Allow use of invsee.
+  * `drstats.echest` - Allow use of echest.
+  * `drstats.undo` - Allow using the undo command.
+
+-----
+
+## 📌 Compatibility & Info
+
+  * **Minecraft Versions:** 1.20.2 - 1.21.x
+  * **Software:** Paper, Spigot, Purpur.
+  * **Metrics:** Uses bStats to collect anonymous usage data.
+
+-----
+
+*Found a bug? Have a suggestion? Join our Discord or open an issue on GitHub\!*
